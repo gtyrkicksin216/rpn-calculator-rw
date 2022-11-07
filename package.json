@@ -3,16 +3,20 @@
   "version": "1.0.0",
   "description": "A calculator that evaluates simple RPN/postfix expressions",
   "main": "dist/main.js",
-	"scripts": {
+  "scripts": {
     "start": "tsc && node dist/main.js",
-		"watch": "npx nodemon src/main.ts"
+    "watch": "npx nodemon src/main.ts",
+    "test": "jest"
   },
   "author": "Ryan Wood",
   "license": "MIT",
   "private": false,
   "devDependencies": {
+    "@types/jest": "^29.2.2",
     "@types/node": "^18.11.9",
+    "jest": "^29.2.2",
     "nodemon": "^2.0.20",
+    "ts-jest": "^29.0.3",
     "ts-node": "^10.9.1",
     "typescript": "^4.8.4"
   }
