@@ -10,7 +10,7 @@ let userInput: string[] = []
 let stack: string[] = []
 
 stdin.on('data', (val) => {
-	userInputCallback(stack, val, expression, userInput)
+	userInputCallback(stack, val.toString(), expression, userInput)
 })
 
 stdin.on('close', () => {

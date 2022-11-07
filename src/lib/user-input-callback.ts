@@ -5,7 +5,7 @@ import { stripNewlineCharacters } from "./strip-newline-characters"
 
 export const userInputCallback = (
 	stack: string[],
-	value: Buffer,
+	value: string,
 	expression: string,
 	userInput: string[]
 ): void => {
