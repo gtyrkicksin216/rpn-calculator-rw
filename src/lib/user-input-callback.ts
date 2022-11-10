@@ -10,7 +10,7 @@ export const userInputCallback = (
 	userInput: string[]
 ): void => {
 	expression = stripNewlineCharacters(value.toString().trim())
-	if (expression === 'q') return exit(1)
+	if (expression === 'q') return exit(0)
 	if (expression === 'c') {
 		clearStack(stack, 'Input has been cleared. Enter a new expression:\n> ')
 

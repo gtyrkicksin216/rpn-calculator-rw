@@ -16,3 +16,7 @@ stdin.on('data', (val) => {
 stdin.on('close', () => {
 	clearStack(stack, '👋 Bye! Thank you for using my posfix calculator.')
 })
+
+process.on('exit', () => {
+	clearStack(stack, '👋 Bye! Thank you for using my posfix calculator.')
+})

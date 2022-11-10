@@ -1,16 +1,26 @@
 import { Operations } from './operations'
 
-export const handleOperation = (valueA: number, valueB: number, operator: string): number => {
+const formatOutput = (result: number) => Math.round(result) === result ? result.toFixed(1) : result
+
+export const handleOperation = (valueA: number, valueB: number, operator: string): string | number => {
+	let answer: number
 	switch(operator) {
 		case '+':
-			return Operations.add(valueA, valueB)
+			answer = Operations.add(valueA, valueB)
+			break
 		case '-':
-			return Operations.subtract(valueA, valueB)
+			answer = Operations.subtract(valueA, valueB)
+			break
 		case '*':
-			return Operations.multiply(valueA, valueB)
+			answer = Operations.multiply(valueA, valueB)
+			break
 		case '/':
-			return Operations.divide(valueA, valueB)
+			answer = Operations.divide(valueA, valueB)
+			break
 		default:
-			return 0
+			answer = 0
+			break
 	}
+
+	return formatOutput(answer)
 }
